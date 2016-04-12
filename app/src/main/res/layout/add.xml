@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/noteName"
+        android:hint="请输入标题"
+        android:textColor="#0000ff"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/noteTime"
+        android:layout_below="@+id/noteName"
+        android:editable="false"
+        android:textColor="#0000ff" />
+    <view
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/noteMain"
+        android:layout_below="@+id/noteTime"
+        android:layout_above="@+id/relativeLayout1"
+        class="com.example.tick.memo.LinedEditText"
+        android:background="#00ffff"
+        android:capitalize="sentences"
+        android:fadingEdge="vertical"
+        android:gravity="top"
+        android:padding="5dip"
+        android:scrollbars="vertical"
+        android:hint="请输入内容"
+        android:textColor="#0000ff"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout1"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCommit"
+            android:text="保存"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCancel"
+            android:layout_toRightOf="@+id/btnCommit"
+            android:text="取消"/>
+    </RelativeLayout>
+
+</RelativeLayout>
